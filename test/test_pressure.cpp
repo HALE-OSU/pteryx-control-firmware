@@ -8,6 +8,7 @@ void tearDown(void) {}
 
 void example_passing_test(void) {
     TEST_ASSERT_EQUAL(0, analogInputToVoltage(0));
+    TEST_ASSERT_EQUAL(1, analogInputToVoltage(0));
 }
 
 int main(void) {
