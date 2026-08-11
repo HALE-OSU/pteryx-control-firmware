@@ -2,7 +2,7 @@
 
 void SolenoidModule::setup() {
     ioExpander.initialize(12);
-    ioExpander.pinMode(2, OUTPUT);
+    ioExpander.pinMode(2, INPUT);
 }
 
 void SolenoidModule::loop() {
