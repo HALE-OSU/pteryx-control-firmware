@@ -1,6 +1,6 @@
 #pragma once
 
-#if defined(ENV_NATIVE)
+#if defined(ENV_FAKE)
 #include "../hardware/mcp23008/fake_mcp23008.h"
 #else
 #include "../hardware/mcp23008/real_mcp23008.h"

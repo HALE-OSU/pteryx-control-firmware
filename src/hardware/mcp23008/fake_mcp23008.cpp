@@ -1,11 +1,10 @@
-#undef UNITY_INCLUDE_CONFIG_H
-#include <unity.h>
-
 #include "fake_mcp23008.h"
+#include "../serial/serial_logger.h"
 
 bool MCP23008::validateInitialized() {
     if (!initialized) {
-        TEST_FAIL_MESSAGE("MCP23008 used before initialize() was called");
+        SerialLogger::printError(
+            "MCP23008 used before initialize() was called");
         return false;
     }
 
@@ -14,7 +13,7 @@ bool MCP23008::validateInitialized() {
 
 bool MCP23008::validatePinNumber(uint8_t pin) {
     if (pin < 0 || pin >= NUM_PINS) {
-        TEST_FAIL_MESSAGE("MCP23008 pin number out of range");
+        SerialLogger::printError("MCP23008 pin number out of range");
         return false;
     }
 
@@ -33,7 +32,8 @@ bool MCP23008::validatePinMode(uint8_t pin, uint8_t mode) {
         return true;
     }
 
-    TEST_FAIL_MESSAGE("MCP23008 pin mode mismatch for requested operation");
+    SerialLogger::printError(
+        "MCP23008 pin mode mismatch for requested operation");
     return false;
 }
 

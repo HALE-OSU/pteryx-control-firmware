@@ -2,7 +2,7 @@
 
 #include "mcp23008.h"
 
-class MCP23008 : BASE_MCP23008 {
+class MCP23008 : Base_MCP23008 {
     static const int NUM_PINS = 8;
 
    private:

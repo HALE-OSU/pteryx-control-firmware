@@ -3,7 +3,7 @@
 #include <Adafruit_MCP23X08.h>
 #include "mcp23008.h"
 
-class MCP23008 : BASE_MCP23008 {
+class MCP23008 : Base_MCP23008 {
    private:
     Adafruit_MCP23X08 mcp;
 

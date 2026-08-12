@@ -7,7 +7,7 @@
 #define INPUT_PULLUP 2
 #define INPUT_PULLDOWN 3
 
-class BASE_MCP23008 {
+class Base_MCP23008 {
    private:
    public:
     virtual void initialize(uint8_t address) = 0;
