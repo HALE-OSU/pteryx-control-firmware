@@ -23,5 +23,5 @@ The task is complete when the following are met:
 - **Relavent Files:** 
 
 <div align="center">
-<img src="https://github.com/HALE-OSU/telemetry-viewer/blob/b251a7f28a025808df29f2fcc62af935c534292f/GUI%20viewer/rocketView3.0/assets/media/HALE_logo.png" alt="Logo" width="25%">
+<img src="https://github.com/HALE-OSU/pteryx-control-firmware/blob/main/assets/HALE_logo.png?raw=true" alt="Logo" width="25%">
 </div>
