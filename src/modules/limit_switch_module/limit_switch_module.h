@@ -3,7 +3,7 @@
 #include "mcp23008/mcp23008.h"
 #include "module.h"
 
-class SolenoidModule : public Module {
+class LimitSwitchModule : public Module {
    private:
     MCP23008 ioExpander;
 

@@ -5,7 +5,7 @@
 
 class MCP23008 {
    private:
-    Adafruit_MCP23X08 mcp;
+    Adafruit_MCP23X08 adafruitMcp23008;
 
    public:
     void initialize(uint8_t address);
