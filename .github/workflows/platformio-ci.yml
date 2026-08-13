@@ -2,7 +2,7 @@ name: PlatformIO CI
 
 on:
   push:
-    branches: ["**"]
+    branches: ["main"]
   pull_request:
     branches: ["**"]
 
@@ -31,8 +31,8 @@ jobs:
       - name: Install PlatformIO
         run: pip install --upgrade platformio
 
-      - name: Run native unit tests
-        run: pio test -e native
+      - name: Run unit tests
+        run: pio test -e test
 
       - name: Build Teensy firmware
         run: pio run -e teensy41

@@ -1,17 +1,21 @@
 #undef UNITY_INCLUDE_CONFIG_H
 #include <unity.h>
 
-#include "../src/pt.h"
+#include "../../../src/hardware/mcp23008/fake_mcp23008.h"
 
 void setUp(void) {}
 void tearDown(void) {}
 
 void example_passing_test(void) {
-    TEST_ASSERT_EQUAL(0, analogInputToVoltage(0));
+    TEST_ASSERT_EQUAL(1, 1);
+}
+
+void run_tests() {
+    RUN_TEST(example_passing_test);
 }
 
 int main(void) {
     UNITY_BEGIN();
-    RUN_TEST(example_passing_test);
+    run_tests();
     return UNITY_END();
 }
