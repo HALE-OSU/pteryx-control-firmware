@@ -2,7 +2,7 @@
 
 #include "mcp23008.h"
 
-class MCP23008 : Base_MCP23008 {
+class MCP23008 {
     static const int NUM_PINS = 8;
 
    private:
@@ -20,10 +20,10 @@ class MCP23008 : Base_MCP23008 {
     bool validatePinMode(uint8_t pin, uint8_t mode);
 
    public:
-    void initialize(uint8_t address) override;
-    void pinMode(uint8_t pin, uint8_t mode) override;
-    void digitalWrite(uint8_t pin, bool state) override;
-    bool digitalRead(uint8_t pin) override;
+    void initialize(uint8_t address);
+    void pinMode(uint8_t pin, uint8_t mode);
+    void digitalWrite(uint8_t pin, bool state);
+    bool digitalRead(uint8_t pin);
 
     /** Used to check the current state of a pin for unit testing */
     bool checkPinState(uint8_t pin);

@@ -1,5 +1,5 @@
 #include "fake_mcp23008.h"
-#include "../serial/serial_logger.h"
+#include "serial_logger/serial_logger.h"
 
 bool MCP23008::validateInitialized() {
     if (!initialized) {
