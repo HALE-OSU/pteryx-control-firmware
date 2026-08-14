@@ -1,6 +1,10 @@
 #include "fake_mcp23008.h"
 #include "serial_logger/serial_logger.h"
 
+bool MCP23008::validatePinNumber(uint8_t pin) {
+    return false;  // TODO: remove this
+}
+
 void MCP23008::initialize(uint8_t address) {}
 
 void MCP23008::pinMode(uint8_t pin, uint8_t mode) {
@@ -16,5 +20,5 @@ bool MCP23008::digitalRead(uint8_t pin) {
 }
 
 bool MCP23008::checkPinState(uint8_t pin) {
-    // TODO: remove this
+    return false;  // TODO: remove this
 }

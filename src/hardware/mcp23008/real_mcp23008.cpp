@@ -16,4 +16,5 @@ void MCP23008::digitalWrite(uint8_t pin, bool state) {
 
 bool MCP23008::digitalRead(uint8_t pin) {
     // TODO: Read the value of a pin (either HIGH or LOW) and return it
+    return false;  // TODO: remove this
 }
