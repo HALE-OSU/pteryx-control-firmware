@@ -1,17 +1,12 @@
 #pragma once
 
+// Provides the uint8_t type, which is an 8 bit unsigned integer (a whole number
+// 0-255). This is commonly used for pin numbers and configuration modes where
+// large or negative numbers are not needed
 #include <cstdint>
 
-#define INPUT 0
-#define OUTPUT 1
-#define INPUT_PULLUP 2
-#define INPUT_PULLDOWN 3
-
-class Base_MCP23008 {
-   private:
-   public:
-    virtual void initialize(uint8_t address) = 0;
-    virtual void pinMode(uint8_t pin, uint8_t mode) = 0;
-    virtual void digitalWrite(uint8_t pin, bool state) = 0;
-    virtual bool digitalRead(uint8_t pin) = 0;
-};
+#ifdef ENV_FAKE
+#include "fake_mcp23008.h"
+#else
+#include "real_mcp23008.h"
+#endif
