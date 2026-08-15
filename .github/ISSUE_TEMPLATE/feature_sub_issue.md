@@ -1,7 +1,7 @@
 ---
 name: Feature Sub-Issue
 about: A sub-issue for a larger feature.
-title: 'Name of Sub Issue'
+title: 'Root Feature Name - Sub-Feature Issue'
 labels: []
 type: Subtask
 assignees: ''

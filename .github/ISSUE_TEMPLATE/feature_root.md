@@ -1,7 +1,7 @@
 ---
 name: Feature Root Issue
 about: The root issue of a larger feature with multiple sub-issues.
-title: 'Name of Root Issue'
+title: 'Root Feature Name'
 labels: []
 type: Feature
 assignees: ''
