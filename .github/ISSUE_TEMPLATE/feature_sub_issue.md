@@ -16,6 +16,9 @@ This is the **sub issue** that belongs to a **root issue**.
 
 **Git Branch:** `root-issue-name/sub-issue-name`
 
+## Description
+Provide a clear overview of what needs to be accomplished and why.
+
 ## Required Test Cases
 - [ ] Test case(s) 1
 - [ ] ...
