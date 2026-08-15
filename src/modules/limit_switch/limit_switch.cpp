@@ -1,4 +1,4 @@
-#include "limit_switch_module.h"
+#include "limit_switch.h"
 #include "serial_logger/serial_logger.h"
 
 void LimitSwitchModule::setup() {
