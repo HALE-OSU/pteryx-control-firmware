@@ -1,6 +1,6 @@
 ---
 name: Task
-description: Track a discrete unit of work, feature implementation, or maintenance task.
+about: Track a discrete unit of work, feature implementation, or maintenance task.
 title: 'Task: [Short Summary]'
 labels: ['todo', 'task']
 assignees: ''
