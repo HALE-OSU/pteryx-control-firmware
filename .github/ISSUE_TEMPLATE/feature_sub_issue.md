@@ -1,9 +1,9 @@
 ---
-name: Feature Root Issue
-about: The root issue of a larger feature with multiple sub-issues.
-title: 'Name of Root Issue'
+name: Feature Sub-Issue
+about: A sub-issue for a larger feature.
+title: 'Name of Sub Issue'
 labels: []
-type: Feature
+type: Subtask
 assignees: ''
 ---
 
