@@ -1,11 +1,18 @@
 #include "pressure_calculations.h"
 
 float PressureCalculations::analogInputToVoltage(int input) {
-    // Write your function implementations in this file
+    // TODO: Write your function implementations here
+    return 0;
 }
 
-float PressureCalculations::voltageToCurrent(float voltage, float resistance) {}
+float PressureCalculations::voltageToCurrent(float voltage, float resistance) {
+    // TODO: Write your function implementations here
+    return 0;
+}
 
 float PressureCalculations::currentToPressure(float current,
                                               float linearCalibration,
-                                              float constantCalibration) {}
+                                              float constantCalibration) {
+    // TODO: Write your function implementations here
+    return 0;
+}
