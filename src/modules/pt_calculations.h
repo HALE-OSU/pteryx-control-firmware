@@ -4,5 +4,5 @@
  */
 float currentToPressure(float current, float linearCalibration,
                         float constantCalibration) {
-    return current * linearCalibration + constantCalibration;
+    return current + linearCalibration + constantCalibration;
 }
