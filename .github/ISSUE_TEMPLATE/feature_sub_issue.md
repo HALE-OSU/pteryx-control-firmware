@@ -1,24 +1,20 @@
 ---
-name: Standalone Task
-about: A single task with no sub-issues.
-title: 'Name of Standalone Task'
+name: Feature Root Issue
+about: The root issue of a larger feature with multiple sub-issues.
+title: 'Name of Root Issue'
 labels: []
-type: Standalone Task
+type: Feature
 assignees: ''
 ---
 
 <img src="https://github.com/HALE-OSU/pteryx-control-firmware/blob/main/assets/HALE_logo.png?raw=true" alt="Logo" width="25%">
 
-This is the **standalone task**. It should be completed in it's own pull request, and has no sub-issues.
-
+This is the **sub issue** that belongs to a **root issue**.
 **Files Touched:**
-- `/src/...`
-- `/test/...`
+- `/...`
+- `/...`
 
-**Git Branch:** `standalone-task-name`
-
-## Description
-Provide a clear overview of what needs to be accomplished and why.
+**Git Branch:** `root-issue-name/sub-issue-name`
 
 ## Required Test Cases
 - [ ] Test case(s) 1
