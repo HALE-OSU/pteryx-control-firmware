@@ -10,6 +10,7 @@ float PressureCalculations::voltageToCurrent(float voltage, float resistance) {
     return 0;
 }
 
+
 float PressureCalculations::currentToPressure(float current,
                                               float linearCalibration,
                                               float constantCalibration) {
