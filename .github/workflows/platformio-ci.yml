@@ -4,7 +4,6 @@ on:
   push:
     branches: ["main"]
   pull_request:
-    branches: ["**"]
 
 jobs:
   test-and-build:
@@ -36,3 +35,6 @@ jobs:
 
       - name: Build Teensy firmware
         run: pio run -e teensy41
+
+      - name: Build firmware simulation
+        run: pio run -e simulate
