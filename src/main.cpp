@@ -4,6 +4,10 @@
 
 #include "serial_logger/serial_logger.h"
 #include "pteryx_stack.h"
+#include "networking/websocket/websocket.h"
+
+// FIXME: remove after testing
+Websocket ws;
 
 PteryxStack stack;
 
@@ -21,13 +25,20 @@ void loop() {
 #include <thread>
 #include <chrono>
 
-/** The simulation environment has to manually call setup and loop in main() */
+/** The simulation environment has to manually call setup and loop in main()
+ */
 int main() {
     setup();
+    ws.setup();
 
     while (1) {
         loop();
+
+        // Delay between loop runs
         std::this_thread::sleep_for(std::chrono::milliseconds(500));
+
+        // Send data to the dashboard over websockets
+        ws.loop();
     }
 }
 
