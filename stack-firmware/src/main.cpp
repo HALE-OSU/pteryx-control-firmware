@@ -2,21 +2,23 @@
 #include <Arduino.h>
 #endif
 
-#include "serial_logger/serial_logger.h"
 #include "pteryx_stack.h"
-#include "networking/websocket/websocket.h"
+#include "networking/network_controller.h"
 
 // FIXME: remove after testing
-Websocket ws;
 
 PteryxStack stack;
+NetworkController networkController;
 
 void setup() {
     stack.load_configuration();
+    networkController.setup();
 }
 
 void loop() {
     stack.loop();
+    networkController.loop();
+    networkController.sendCommand(-1, (uint8_t)1);
 }
 
 #ifdef ENV_SIMULATE
@@ -29,16 +31,12 @@ void loop() {
  */
 int main() {
     setup();
-    ws.setup();
 
     while (1) {
         loop();
 
         // Delay between loop runs
         std::this_thread::sleep_for(std::chrono::milliseconds(500));
-
-        // Send data to the dashboard over websockets
-        ws.loop();
     }
 }
 

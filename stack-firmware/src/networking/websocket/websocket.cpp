@@ -1,4 +1,5 @@
 #include "websocket.h"
+#include <vector>
 
 void Websocket::setup() {
     // Setup windows socket
@@ -29,4 +30,20 @@ void Websocket::loop() {
             printf("received: %s\n", msg.c_str());
         });
     }
+}
+
+void Websocket::send(uint8_t* data, size_t packetSize) {
+    // TODO: move to shared scope
+    std::vector<uint8_t> dataVec;
+    dataVec.reserve(packetSize);
+
+    for (int i = 0; i < packetSize; i++) {
+        dataVec.push_back(data[i]);
+    }
+
+    printf("COMMAND DATA %d\n", dataVec.at(0));
+
+    ws->sendBinary(dataVec);
+
+    dataVec.clear();
 }

@@ -1,4 +1,7 @@
+#pragma once
+
 #include <cstdio>
+#include <cstdint>
 #include <string>
 #include "easywsclient.hpp"
 
@@ -16,4 +19,6 @@ class Websocket {
    public:
     void setup();
     void loop();
+
+    void send(uint8_t* data, size_t packetSize);
 };

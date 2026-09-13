@@ -5,8 +5,9 @@ const wss = new WebSocketServer({ port: 8080 });
 wss.on("connection", (ws: WebSocket) => {
   console.log("New client connected!");
 
-  ws.on("message", (message: string) => {
-    console.log(`Received: ${message}`);
+  ws.on("message", (message: WebSocket.RawData) => {
+    console.log(`Received: ${(message as Uint8Array)[0]}`);
+
     ws.send(`Echo: ${message}`);
   });
 
