@@ -6,10 +6,18 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include "filesystem/filesystem.h"
+
+#include <iostream>
 
 void PteryxStack::load_configuration() {
     SerialLogger::printLine("[Pteryx Stack]: Configuration Begin");
     SerialLogger::addIndent();
+
+    Filesystem fs;
+    auto config = fs.loadConfiguration();
+    std::cout << "CONFIG" << config << std::endl;
+    printf("CONFIG %s\n", config);
 
     // std::ifstream file("test.txt");
 
@@ -28,7 +36,7 @@ void PteryxStack::load_configuration() {
     // //     "}";
 
     // // Deserialize the JSON document
-    // DeserializationError error = deserializeJson(doc, content.c_str());
+    // /DeserializationError error = deserializeJson(doc, content.c_str());
 
     // // Test if parsing succeeds
     // if (error) {
