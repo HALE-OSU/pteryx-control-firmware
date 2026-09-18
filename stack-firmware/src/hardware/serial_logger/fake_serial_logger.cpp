@@ -30,12 +30,14 @@ void SerialLogger::printLine(std::string text) {
     std::cout << text << std::endl;
 }
 
-void SerialLogger::printError(std::string text) {
+void SerialLogger::logError(std::string text) {
     for (int i = 0; i < indentation; i++) {
         std::cerr << "  ";
     }
 
     std::cerr << "[ERROR]: " << text << std::endl;
+
+    Filesystem::logError(text);
 
 #if ENV_TEST
     TEST_FAIL_MESSAGE(text.c_str());

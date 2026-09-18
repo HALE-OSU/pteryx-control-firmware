@@ -25,11 +25,13 @@ void SerialLogger::printLine(std::string text) {
     Serial.println(text.c_str());
 }
 
-void SerialLogger::printError(std::string text) {
+void SerialLogger::logError(std::string text) {
     for (int i = 0; i < indentation; i++) {
         Serial.print("  ");
     }
 
     Serial.print("[ERROR]: ");
     Serial.println(text.c_str());
+
+    Filesystem::logError(text);
 }

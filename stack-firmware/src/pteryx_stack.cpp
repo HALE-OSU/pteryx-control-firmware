@@ -15,10 +15,8 @@ void PteryxStack::load_configuration() {
     SerialLogger::addIndent();
 
     Filesystem::initialize();
+    // TODO: error handling
     auto config = Filesystem::loadConfiguration();
-    std::cout << "CONFIG" << config << std::endl;
-
-    Filesystem::logError("TEST ERROR");
 
     // std::ifstream file("test.txt");
 
