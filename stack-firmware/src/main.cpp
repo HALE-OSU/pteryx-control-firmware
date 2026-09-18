@@ -5,13 +5,14 @@
 #include "pteryx_stack.h"
 #include "networking/network_controller.h"
 
-// FIXME: remove after testing
+#include "time/time.h"
 
 PteryxStack stack;
 NetworkController networkController;
 
 void setup() {
     stack.load_configuration();
+    printf("%s\n", Time::getTimestampString());
     networkController.setup();
 }
 

@@ -14,10 +14,11 @@ void PteryxStack::load_configuration() {
     SerialLogger::printLine("[Pteryx Stack]: Configuration Begin");
     SerialLogger::addIndent();
 
-    Filesystem fs;
-    auto config = fs.loadConfiguration();
+    Filesystem::initialize();
+    auto config = Filesystem::loadConfiguration();
     std::cout << "CONFIG" << config << std::endl;
-    printf("CONFIG %s\n", config);
+
+    Filesystem::logError("TEST ERROR");
 
     // std::ifstream file("test.txt");
 
